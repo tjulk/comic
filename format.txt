@@ -1,0 +1,446 @@
+
+此API可以按照名字对漫画进行搜索
+http://comic.cnodejs.net/comic/list/byName/漫画名字
+例如
+http://comic.cnodejs.net/comic/list/byName/%E5%AD%A4%E9%AB%98%E4%B9%8B%E4%BA%BA
+http://comic.cnodejs.net/comic/list/byName/孤高之人
+
+{
+result_status:{
+code: 100010表示成功, 
+msg: 可以不用管, 
+num: 符合条件的记录数
+}, 
+result:{
+status: 连载中或者已完结,
+wrapping : 封面图片（目前178做了防盗链，这个问题要想办法解决。。。）,
+desc: 漫画简介,
+name: 漫画名称,
+section:[ {
+title: 卷标(第一卷，第一话之类),
+link: 此卷在网站上实际所指向的地址,
+_id: 木用
+pic:[{
+link:"g/孤高之人/第01卷/001.jpg" (需要配合http://comic.cnodejs.net/comic/prefix/运营商 这个接口拿到实际下载地址:http://imgw.manhua.178.com/g/%E5%AD%A4%E9%AB%98%E4%B9%8B%E4%BA%BA/%E7%AC%AC01%E5%8D%B7/001.jpg),
+_id: 木用
+},{
+link: "g/孤高之人/第01卷/002.jpg",
+_id: 木用
+}。。。。。。。。。。]
+},{
+title: 卷标(第二卷，第二话之类),
+link: 此卷在网站上实际所指向的地址,
+_id: 木用
+pic:[{
+link:""g/孤高之人/[清晰版][小成]第02卷/001.jpg" (需要配合http://comic.cnodejs.net/comic/prefix/运营商 这个接口拿到实际下载地址:http://imgw.manhua.178.com/g/%E5%AD%A4%E9%AB%98%E4%B9%8B%E4%BA%BA/[%E6%B8%85%E6%99%B0%E7%89%88][%E5%B0%8F%E6%88%90]%E7%AC%AC02%E5%8D%B7/001.jpg),
+_id: 木用
+},{
+link: "g/孤高之人/[清晰版][小成]第02卷/002.jpg",
+_id: 木用
+}。。。。。。。。。。]
+
+}。。。。。。。。。。。。 ],
+theme: [{ 
+name: "题材名字,如冒险",
+link: 木用,
+_id: 木用
+} , {
+name: "竞技",
+link: 木用,
+_id: 木用
+}	
+],
+author: [{
+name: "作者名字：如坂本真一 ",
+link: 木用,
+_id: 木用
+} , {
+name: "作者名字：如坂本真一 ",
+link: 木用,
+_id: 木用
+}。。。],
+location: [{
+name: "所属地区",
+link: 木用,
+_id: 木用
+} , {
+name: "日本",
+link: 木用,
+_id: 木用
+}。。。],
+lastUpdate: [
+name: "最后更新至哪个卷标：第十卷",
+link: "木用",
+_id: "木用"
+]
+}
+}
+
+
+此API可以按照作者对漫画进行搜索(每页最多提供20条数据)
+http://comic.cnodejs.net/comic/list/byAuthor/作者/页码
+例如
+http://comic.cnodejs.net/comic/list/byAuthor/%E9%B8%9F%E5%B1%B1%E6%98%8E/1
+http://comic.cnodejs.net/comic/list/byAuthor/鸟山明/1
+
+{
+result_status: {
+code: 100010表示成功,
+msg: "主银，找到鸟",
+num: 符合条件的总记录数
+} , 
+result:[{
+name: "漫画名称",
+desc: "漫画简介",
+wrapping: "漫画封皮",
+status: "是否已经完结",
+theme: [{ 
+name: "题材名字,如冒险",
+link: 木用,
+_id: 木用
+} , {
+name: "竞技",
+link: 木用,
+_id: 木用
+}	
+],	
+author: [{
+name: "作者名字 ",
+link: 木用,
+_id: 木用
+}],
+location: [{
+name: "所属地区",
+link: 木用,
+_id: 木用
+} , {
+name: "日本",
+link: 木用,
+_id: 木用
+}。。。],
+lastUpdate: [
+name: "最后更新至哪个卷标：第十卷",
+link: "木用",
+_id: "木用"
+]	
+},{
+后面的其他作品
+}。。。。。。]
+}
+
+此API可以按照所属地区对漫画进行搜索(每页最多提供20条数据)
+http://comic.cnodejs.net/comic/list/byLocation/地区/页码
+例如
+http://comic.cnodejs.net/comic/list/byLocation/%E6%97%A5%E6%9C%AC/1
+http://comic.cnodejs.net/comic/list/byLocation/日本/1
+{
+result_status: {
+code: 100010表示成功,
+msg: "主银，找到鸟",
+num: 符合条件的总记录数
+} , 
+result:[{
+name: "漫画名称",
+desc: "漫画简介",
+wrapping: "漫画封皮",
+status: "是否已经完结",
+theme: [{ 
+name: "题材名字,如冒险",
+link: 木用,
+_id: 木用
+} , {
+name: "竞技",
+link: 木用,
+_id: 木用
+}	
+],	
+author: [{
+name: "作者名字 ",
+link: 木用,
+_id: 木用
+}],
+location: [{
+name: "所属地区",
+link: 木用,
+_id: 木用
+} , {
+name: "日本",
+link: 木用,
+_id: 木用
+}。。。],
+lastUpdate: [
+name: "最后更新至哪个卷标：第十卷",
+link: "木用",
+_id: "木用"
+]	
+},{
+后面的其他作品
+}。。。。。。]
+}
+
+
+
+
+此API可以按照所属题材对漫画进行搜索(每页最多提供20条数据)
+http://comic.cnodejs.net/comic/list/byTheme/题材/页码
+例如
+http://comic.cnodejs.net/comic/list/byTheme/%E4%BC%AA%E5%A8%98/1
+http://comic.cnodejs.net/comic/list/byTheme/伪娘/1
+{
+result_status: {
+code: 100010表示成功,
+msg: "主银，找到鸟",
+num: 符合条件的总记录数
+} , 
+result:[{
+name: "漫画名称",
+desc: "漫画简介",
+wrapping: "漫画封皮",
+status: "是否已经完结",
+theme: [{ 
+name: "题材名字,如冒险",
+link: 木用,
+_id: 木用
+} , {
+name: "竞技",
+link: 木用,
+_id: 木用
+}	
+],	
+author: [{
+name: "作者名字 ",
+link: 木用,
+_id: 木用
+}],
+location: [{
+name: "所属地区",
+link: 木用,
+_id: 木用
+} , {
+name: "日本",
+link: 木用,
+_id: 木用
+}。。。],
+lastUpdate: [
+name: "最后更新至哪个卷标：第十卷",
+link: "木用",
+_id: "木用"
+]	
+},{
+后面的其他作品
+}。。。。。。]
+}
+
+
+此API可以按照所属种类对漫画进行搜索(每页最多提供20条数据)
+http://comic.cnodejs.net/comic/list/byClassification/种类/页码
+例如:
+http://comic.cnodejs.net/comic/list/byClassification/%E5%B0%91%E5%B9%B4%E6%BC%AB%E7%94%BB/1
+http://comic.cnodejs.net/comic/list/byClassification/少年漫画/1
+{
+result_status: {
+code: 100010表示成功,
+msg: "主银，找到鸟",
+num: 符合条件的总记录数
+} , 
+result:[{
+name: "漫画名称",
+desc: "漫画简介",
+wrapping: "漫画封皮",
+status: "是否已经完结",
+theme: [{ 
+name: "题材名字,如冒险",
+link: 木用,
+_id: 木用
+} , {
+name: "竞技",
+link: 木用,
+_id: 木用
+}	
+],	
+author: [{
+name: "作者名字 ",
+link: 木用,
+_id: 木用
+}],
+location: [{
+name: "所属地区",
+link: 木用,
+_id: 木用
+} , {
+name: "日本",
+link: 木用,
+_id: 木用
+}。。。],
+lastUpdate: [
+name: "最后更新至哪个卷标：第十卷",
+link: "木用",
+_id: "木用"
+]	
+},{
+后面的其他作品
+}。。。。。。]
+}
+
+
+
+此API可以按照首字首字母对漫画进行搜索(每页最多提供20条数据)
+http://comic.cnodejs.net/comic/list/byTag/首字母（如果是数字请写成'num'）/页码
+例如:
+http://comic.cnodejs.net/comic/list/byTag/w/1
+http://comic.cnodejs.net/comic/list/byTag/num/1
+
+{
+result_status: {
+code: 100010表示成功,
+msg: "主银，找到鸟",
+num: 符合条件的总记录数
+} , 
+result:[{
+name: "漫画名称",
+desc: "漫画简介",
+wrapping: "漫画封皮",
+status: "是否已经完结",
+theme: [{ 
+name: "题材名字,如冒险",
+link: 木用,
+_id: 木用
+} , {
+name: "竞技",
+link: 木用,
+_id: 木用
+}	
+],	
+author: [{
+name: "作者名字 ",
+link: 木用,
+_id: 木用
+}],
+location: [{
+name: "所属地区",
+link: 木用,
+_id: 木用
+} , {
+name: "日本",
+link: 木用,
+_id: 木用
+}。。。],
+lastUpdate: [
+name: "最后更新至哪个卷标：第十卷",
+link: "木用",
+_id: "木用"
+]	
+},{
+后面的其他作品
+}。。。。。。]
+}
+
+
+
+此API可以查看当天更新了多少新漫画
+http://comic.cnodejs.net/comic/list/update
+{
+result_status: {
+code: 100010表示成功,
+msg: "主银，找到鸟",
+num: 符合条件的总记录数
+} , 
+result:[{
+name: "漫画名称",
+desc: "漫画简介",
+wrapping: "漫画封皮",
+status: "是否已经完结",
+theme: [{ 
+name: "题材名字,如冒险",
+link: 木用,
+_id: 木用
+} , {
+name: "竞技",
+link: 木用,
+_id: 木用
+}	
+],	
+author: [{
+name: "作者名字 ",
+link: 木用,
+_id: 木用
+}],
+location: [{
+name: "所属地区",
+link: 木用,
+_id: 木用
+} , {
+name: "日本",
+link: 木用,
+_id: 木用
+}。。。],
+lastUpdate: [
+name: "最后更新至哪个卷标：第十卷",
+link: "木用",
+_id: "木用"
+]	
+},{
+后面的其他作品
+}。。。。。。]
+}
+
+
+
+此API可以查看当天有多少新漫画
+http://comic.cnodejs.net/comic/list/new
+{
+result_status: {
+code: 100010表示成功,
+msg: "主银，找到鸟",
+num: 符合条件的总记录数
+} , 
+result:[{
+name: "漫画名称",
+desc: "漫画简介",
+wrapping: "漫画封皮",
+status: "是否已经完结",
+theme: [{ 
+name: "题材名字,如冒险",
+link: 木用,
+_id: 木用
+} , {
+name: "竞技",
+link: 木用,
+_id: 木用
+}	
+],	
+author: [{
+name: "作者名字 ",
+link: 木用,
+_id: 木用
+}],
+location: [{
+name: "所属地区",
+link: 木用,
+_id: 木用
+} , {
+name: "日本",
+link: 木用,
+_id: 木用
+}。。。],
+lastUpdate: [
+name: "最后更新至哪个卷标：第十卷",
+link: "木用",
+_id: "木用"
+]	
+},{
+后面的其他作品
+}。。。。。。]
+}
+
+
+
+此API可以按照线路给出最适合的下载图片的地址前缀
+http://comic.cnodejs.net/comic/prefix/运营商（目前只有网通和电信）
+http://comic.cnodejs.net/comic/prefix/%E7%BD%91%E9%80%9A
+http://comic.cnodejs.net/comic/prefix/网通
+返回：http://imgfastw.manhua.178.com/
+
+http://comic.cnodejs.net/comic/prefix/%E7%94%B5%E4%BF%A1
+http://comic.cnodejs.net/comic/prefix/电信
+返回：http://imgfastd.manhua.178.com/

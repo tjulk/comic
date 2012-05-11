@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/searchResultBox"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ProgressBar
+        android:id="@id/srprogBar"
+        style="@style/loading_l"
+        android:layout_width="70.0px"
+        android:layout_height="70.0px"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@id/searchErrMsgBox"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:text="@string/searchNoResultTitle"
+            android:textColor="@color/listTitle"
+            android:textSize="15.0sp" />
+
+        <TextView
+            android:id="@id/shTips"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:text="@string/searchNoResultTips"
+            android:textColor="@color/text"
+            android:textSize="13.0sp" />
+
+        <GridView
+            android:id="@id/ShGridview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnWidth="83.0dip"
+            android:gravity="center"
+            android:horizontalSpacing="10.0dip"
+            android:listSelector="@drawable/flat_btn"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="10.0dip" />
+    </LinearLayout>
+
+</LinearLayout>

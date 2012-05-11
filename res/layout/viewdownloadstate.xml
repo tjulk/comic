@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/downloadStatusBox"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ProgressBar
+        android:id="@id/progBar"
+        style="@style/loading_l"
+        android:layout_width="70.0px"
+        android:layout_height="70.0px"
+        android:layout_centerInParent="true" />
+
+    <ProgressBar
+        android:id="@id/progBarDef"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@id/downLoadErrMsgBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@id/downLoadErrText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15.0dip"
+            android:textColor="@color/listTitle" />
+
+        <Button
+            android:id="@id/btnListLoadErr"
+            style="@style/Btn"
+            android:text="@string/listReBtnText" />
+    </LinearLayout>
+
+</LinearLayout>
