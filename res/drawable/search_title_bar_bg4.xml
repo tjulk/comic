@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">  
+    <item android:drawable="@color/search_title_bar_bg"/>
+
+    <item>
+		<bitmap
+            android:src="@drawable/search_title_bar_block_bg"
+            android:tileMode="repeat" />
+    </item>
+
+</layer-list>
