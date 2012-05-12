@@ -15,46 +15,29 @@ import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.google.gson.annotations.SerializedName;
+import com.nodejs.comic.utils.Utility;
 
 public class SoftwareInfo implements Parcelable {
 
 	public static final String INSTALLS_TAG = "installs";
 	public static final String UNINSTALLS_TAG = "uninstalls";
 	
-	@SerializedName("id")
 	private String apkId;
-	@SerializedName("apkUrl")
 	private String apkUrl;
-	@SerializedName("packageName")
 	private String packageName;
-	@SerializedName("versionCode")
 	private int versionCode;
-	@SerializedName("versionName")
 	private String versionName;
-	@SerializedName("name")
 	private String name;
-	@SerializedName("size")
 	private String size;
-	@SerializedName("downloadCount")
 	private String downloadCount;
-	@SerializedName("latestPubDate")
 	private String lastModifyTime;
-	@SerializedName("author")
 	private String author;
-	@SerializedName("icon")
 	private String icon;
-	@SerializedName("description")
 	private String intro;
-	@SerializedName("battery")
 	private String battery;
-	@SerializedName("security")
 	private String security;
-	@SerializedName("datatraffic")
 	private String dataTraffic;
-	@SerializedName("testreport")
 	private String report;
-	@SerializedName("previews")
 	private String[] previews;
 	private Drawable localIcon;
 

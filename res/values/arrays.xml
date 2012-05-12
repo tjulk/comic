@@ -16,4 +16,37 @@
         <item>男</item>
         <item>女</item>
     </string-array>
+    
+    <string-array name="download_entries_list_preference">
+        <item>@string/download_entry_one</item>
+        <item>@string/download_entry_two</item>
+    </string-array>
+    <string-array name="download_entryValues_list_preference">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="key_words">
+        <item>B-Angry Birds</item>
+        <item>Tom Cat</item>
+        <item>Fruit</item>
+        <item>B-Google+</item>
+        <item>B-PPTV</item>
+        <item>File explorer</item>
+        <item>Gmail</item>
+        <item>Ever note</item>
+        <item>QQ</item>
+        <item>flash</item>
+        <item>Book</item>
+        <item>browser</item>
+        <item>Fishing</item>
+        <item>B-Subway</item>
+        <item>music</item>
+        <item>weather</item>
+        <item>Tool</item>
+        <item>Office</item>
+        <item>B-FaceBook</item>
+        <item>Twitter</item>
+        <item>Reader</item>
+        <item>360</item>
+    </string-array>
 </resources>

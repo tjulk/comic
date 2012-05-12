@@ -313,4 +313,13 @@
     <string name="only_use_wifi_to_download_key">OnlyUsehWifiToDownload</string>
     
     <string name="notify_no_wifi_download_error">You set only use wifi to download.</string>
+    
+    <string name="network_error">网络异常，点击重试</string>
+    <string name="retry">重试</string>
+    <!-- search -->
+    <string name="no_matches_found">没有找到匹配记录</string>
+    <string name="searching">查询中...</string>
+    
+    <string name="download_entry_one">24Hours Update</string>
+    <string name="download_entry_two">EveryTime Update</string>
 </resources>

@@ -42,15 +42,13 @@ import android.widget.TextView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView.OnItemClickListener;
 
-import com.pekall.market.MarketApplication;
-import com.pekall.market.R;
-import com.pekall.market.handler.MarketContent;
-import com.pekall.market.model.SoftwareInfo;
-import com.pekall.market.util.AsyncImageView;
-import com.pekall.market.util.KeywordsFlow;
-import com.pekall.market.util.RequestConstant;
-import com.pekall.market.util.RequestTask;
-import com.pekall.market.util.Utility;
+import com.nodejs.comic.handler.ComicContent;
+import com.nodejs.comic.models.SoftwareInfo;
+import com.nodejs.comic.utils.AsyncImageView;
+import com.nodejs.comic.utils.KeywordsFlow;
+import com.nodejs.comic.utils.RequestConstant;
+import com.nodejs.comic.utils.RequestTask;
+import com.nodejs.comic.utils.Utility;
 
 public class SearchActivity extends Activity implements OnClickListener, OnItemClickListener, OnScrollListener,
 		RequestTask.OnRequestResult, TextWatcher {
@@ -66,7 +64,7 @@ public class SearchActivity extends Activity implements OnClickListener, OnItemC
 	private TextView mSearchText;
 	private View mFooterView;
 
-	private MarketApplication mApplication;
+	private ComicApplication mApplication;
 	private ArrayList<SoftwareInfo> mSoftwareList;
 	private int mState;
 	private int mMoreState;
@@ -86,8 +84,8 @@ public class SearchActivity extends Activity implements OnClickListener, OnItemC
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		mApplication = (MarketApplication) getApplication();
-		setContentView(R.layout.search);
+		mApplication = (ComicApplication) getApplication();
+		setContentView(R.layout.actsearch);
 		mKeyword = (AutoCompleteTextView) findViewById(R.id.keyword);
 		mKeyword.setOnTouchListener(new View.OnTouchListener() {
 
@@ -235,7 +233,6 @@ public class SearchActivity extends Activity implements OnClickListener, OnItemC
 				if (tmp.size() > 0 && tmp.size() < 10) {
 					mKeyword.setText("");
 					if (mMoreState != GET_MORE_SOFTWARE_LIST_DATA) {
-						System.out.println("===============GET_MORE_SOFTWARE_LIST_DATA=================");
 						mSoftwareList.clear();
 					}
 					mSoftwareList.addAll(tmp);

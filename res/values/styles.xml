@@ -297,4 +297,167 @@
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">60.0dip</item>
     </style>
+    
+        
+        
+        
+    <!-- nodejs  leikang-->
+
+    <style name="Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowDx">2.0</item>
+        <item name="android:shadowDy">2.0</item>
+        <item name="android:shadowRadius">0.2</item>
+    </style>
+
+    <style name="Text.Location" parent="@style/Text">
+        <item name="android:textSize">20.0sp</item>
+    </style>
+
+    <style name="DetailsListView" parent="@android:style/Widget.ListView.White">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+    </style>
+
+    <style name="DetailsEmpty">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:padding">20.0dip</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+    </style>
+
+    <style name="AboutContent">
+        <item name="android:textColor">@color/about_text_color</item>
+        <item name="android:textSize">14dip</item>
+        <item name="android:background">@color/about_content</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+    </style>
+
+    <style name="Title_Bar">
+        <item name="android:textColor">@color/about_text_color</item>
+        <item name="android:textSize">18dip</item>
+        <item name="android:paddingLeft">25dip</item>
+        <item name="android:paddingTop">0dip</item>
+        <item name="android:paddingBottom">8dip</item>
+    </style>
+
+    <!-- fragment style author:haoanbang -->
+
+    <style name="Theme.PageIndicatorDefaults" parent="@android:style/Theme">
+        <item name="circlePageIndicatorStyle">@style/Widget.CirclePageIndicator</item>
+        <item name="titlePageIndicatorStyle">@style/Widget.TitlePageIndicator</item>
+    </style>
+
+    <style name="Widget.CirclePageIndicator" parent="@android:style/Widget">
+        <item name="centered">@bool/default_circle_indicator_centered</item>
+        <item name="fillColor">@color/default_circle_indicator_fill_color</item>
+        <item name="orientation">@integer/default_circle_indicator_orientation</item>
+        <item name="radius">@dimen/default_circle_indicator_radius</item>
+        <item name="snap">@bool/default_circle_indicator_snap</item>
+        <item name="strokeColor">@color/default_circle_indicator_stroke_color</item>
+        <item name="strokeWidth">@dimen/default_circle_indicator_stroke_width</item>
+    </style>
+
+    <style name="Widget.TitlePageIndicator" parent="@android:style/Widget">
+        <item name="clipPadding">@dimen/default_title_indicator_clip_padding</item>
+        <item name="footerColor">@color/default_title_indicator_footer_color</item>
+        <item name="footerLineHeight">@dimen/default_title_indicator_footer_line_height</item>
+        <item name="footerIndicatorStyle">@integer/default_title_indicator_footer_indicator_style</item>
+        <item name="footerIndicatorHeight">@dimen/default_title_indicator_footer_indicator_height</item>
+        <item name="footerIndicatorUnderlinePadding">@dimen/default_title_indicator_footer_indicator_underline_padding</item>
+        <item name="footerPadding">@dimen/default_title_indicator_footer_padding</item>
+        <item name="selectedColor">@color/default_title_indicator_selected_color</item>
+        <item name="selectedBold">@bool/default_title_indicator_selected_bold</item>
+        <item name="textColor">@color/default_title_indicator_text_color</item>
+        <item name="textSize">@dimen/default_title_indicator_text_size</item>
+        <item name="titlePadding">@dimen/default_title_indicator_title_padding</item>
+        <item name="topPadding">@dimen/default_title_indicator_top_padding</item>
+    </style>
+
+    <style name="styleName">
+        <item name="android:background">@drawable/app_single_snapshot_bg</item>
+    </style>
+
+    <!-- downloading style author:haoanbang -->
+    <style name="progressBar_download">
+        <item name="android:maxHeight">5.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/detail_progress_bar</item>
+        <item name="android:minHeight">5.0dip</item>
+    </style>
+
+    <style name="detail_progressBar">
+        <item name="android:minHeight">9.0dip</item>
+        <item name="android:maxHeight">9.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/detail_progress_bar</item>
+    </style>
+
+    <style name="software_list_item_name">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textColor">#313131</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="software_flag_item">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">#2489CF</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="software_list_item_info">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#707070</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="software_author">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#434343</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="software_test_title">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">#1b1b1b</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#F1F1F1</item>
+        <item name="android:shadowDy">0.5</item>
+        <item name="android:shadowColor">#313131</item>
+        <item name="android:shadowRadius">0.1</item>
+    </style>
+
+    <style name="mytheme" parent="@android:style/Theme.Light">
+        <item name="android:windowNoTitle"> true</item>
+    </style>
+
+    <style name="PopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+
+    <style name="Widget.TextView.AlertDialog.Title" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">#ff272727</item>
+    </style>
+
+    <style name="CustomWindowTitleBackground">
+        <item name="android:height">46.7dp</item>
+        <item name="android:background">@drawable/search_title_bar_bg4</item>
+    </style>
+
+    <style name="CustomWindowTitleText">
+        <item name="android:textSize">20dip</item>
+        <item name="android:textColor">#FFffffff</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+ 
 </resources>

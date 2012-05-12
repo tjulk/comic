@@ -34,10 +34,10 @@ import android.text.TextUtils;
 import android.view.ViewGroup;
 
 import com.google.gson.Gson;
-import com.pekall.market.MarketApplication;
-import com.pekall.market.R;
-import com.pekall.market.model.SoftwareInfo;
-import com.pekall.market.model.SoftwareSet;
+import com.nodejs.comic.ComicApplication;
+import com.nodejs.comic.R;
+import com.nodejs.comic.models.SoftwareInfo;
+import com.nodejs.comic.models.SoftwareSet;
 
 public class Utility {
 
@@ -45,23 +45,23 @@ public class Utility {
 	public static final int MB = 1024 * 1024;
 	public static final int FREE_SD_SPACE_NEEDED_TO_CACHE = 10;
 
-	public static final String LOCAL_BASE_PATH = Environment.getExternalStorageDirectory().getPath() + "/PekallMarket/";
+	public static final String LOCAL_BASE_PATH = Environment.getExternalStorageDirectory().getPath() + "/nodejs/comic/";
 	public static final String LOCAL_CACHE_PATH = LOCAL_BASE_PATH + ".cache/";
 
-	public static MarketApplication getMarketApplication(Context context) {
-		return (MarketApplication) context.getApplicationContext();
+	public static ComicApplication getComicApplication(Context context) {
+		return (ComicApplication) context.getApplicationContext();
 	}
 
 	public static ImageCache getImageCache(Context context) {
-		return getMarketApplication(context).getImageCache();
+		return getComicApplication(context).getImageCache();
 	}
 
 	public static HashMap<String, String> getDataCache(Context context) {
-		return getMarketApplication(context).getDataCache();
+		return getComicApplication(context).getDataCache();
 	}
 
 	public static ExecutorService getExecutor(Context context) {
-		return getMarketApplication(context).getExecutor();
+		return getComicApplication(context).getExecutor();
 	}
 
 	public static boolean sdcardStatus() {
@@ -296,7 +296,7 @@ public class Utility {
         return resultBuffer.toString();  
     }  
 	
-	public static HashMap<String, String> getCheckUpdateParams(ArrayList<SoftwareInfo> installs, MarketApplication mApplication) {
+	public static HashMap<String, String> getCheckUpdateParams(ArrayList<SoftwareInfo> installs, ComicApplication mApplication) {
 		HashMap<String, String> params = new HashMap<String, String>();
 		StringBuilder packages = new StringBuilder("{\"packages\":[");
 		StringBuilder packageInfo = null;

@@ -36,10 +36,18 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.webkit.MimeTypeMap;
 
+import com.nodejs.comic.MainActivity;
 import com.nodejs.comic.R;
 import com.nodejs.comic.handler.DownLoadHandler;
+import com.nodejs.comic.handler.ComicContent.DownLoadInfo;
+import com.nodejs.comic.handler.ComicContent.DownLoadInfoColumn;
+import com.nodejs.comic.handler.ComicContent.DownloadStatusInfo;
+import com.nodejs.comic.models.DownLoadInfoStructure;
+import com.nodejs.comic.utils.BufferedRandomAccessFile;
 import com.nodejs.comic.utils.LogUtil;
+import com.nodejs.comic.utils.TipUtil;
 import com.nodejs.comic.utils.Tools;
+import com.nodejs.comic.utils.Utility;
 
 public class DownLoadService extends Service {
 	protected static final String TAG = "DownLoadService ";
@@ -157,7 +165,7 @@ public class DownLoadService extends Service {
 		mNotification = new Notification();
 		mNotification.flags = Notification.FLAG_AUTO_CANCEL;
 		mNotification.icon = android.R.drawable.stat_sys_download;
-		mNfIntent = new Intent(getApplicationContext(), ApplicationManagerActivity.class);
+		mNfIntent = new Intent(getApplicationContext(), MainActivity.class);
 		mNfIntent.putExtra("index", 1);
 		mNotification.setLatestEventInfo(this, "", getString(R.string.download_completed_percent, 0) + "%",
 				PendingIntent.getActivity(getApplicationContext(), 0, mNfIntent, PendingIntent.FLAG_ONE_SHOT));
@@ -213,7 +221,7 @@ public class DownLoadService extends Service {
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-		LogUtil.LOGD(TAG, "download service --------------------");
+		LogUtil.LOGD(TAG, "download service  ");
 		if(!Utility.sdcardStatus()){
 			TipUtil.showMessageByShort(R.string.error_sdcard_no);
 			return 0;
@@ -226,9 +234,9 @@ public class DownLoadService extends Service {
 		} else {
 			for (DownLoadInfoStructure info : mDownLoadHandler.getAllInfo()) {
 				if (mItemKey.equals(info.key)) {
-					LogUtil.LOGD(TAG, "The handler has this info alreaday.----------");
+					LogUtil.LOGD(TAG, "The handler has this info alreaday. ");
 					if (info.getDownLoadState() == DownLoadInfoStructure.DOWNLOAD_STATE_PAUSE) {
-						LogUtil.LOGD(TAG, "The handler has this info alreaday.-------and pause---");
+						LogUtil.LOGD(TAG, "The handler has this info alreaday. and pause ");
 						info.setDownLoadState(DownLoadInfoStructure.DOWNLOAD_STATE_WAIT);
 						// new DownTask().execute(info);
 						startDownloadTask(info);
@@ -249,14 +257,14 @@ public class DownLoadService extends Service {
 		Cursor c = mContentResolver.query(DownLoadInfo.CONTENT_URI, null, DownLoadInfoColumn.ITEM_KEY + " = ?",
 				new String[] { mItemKey }, null);
 		if (c == null || c.getCount() <= 0) {
-			LogUtil.LOGD(TAG, "The handler has not this info.-----This info is not in the db.-----");
+			LogUtil.LOGD(TAG, "The handler has not this info.-----This info is not in the db. ");
 			DownLoadInfoStructure info = new DownLoadInfoStructure(this, mItemKey, mItemPackageName, null, 0, -1,
 					mItemName, DownLoadInfoStructure.DOWNLOAD_STATE_WAIT);
 			mDownLoadHandler.addItem(info);
 			startDownloadTask(info);
 			// new DownTask().execute(info);
 		} else {
-			LogUtil.LOGD(TAG, "The handler has not this info.-----This info is in the db.-----");
+			LogUtil.LOGD(TAG, "The handler has not this info.-----This info is in the db. ");
 			c.moveToFirst();
 			int curSize = c.getInt(DownLoadInfo.CONTENT_ITEM_CUR_SIZE_COLUMN);
 			if (curSize <= 0) {
