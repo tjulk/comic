@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="4.0dip" >
+
+    <ImageView
+        android:id="@id/RcItemIcon"
+        android:layout_width="83.0dip"
+        android:layout_height="110.0dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5.0dip"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@id/RcItemTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/listTitle"
+        android:textSize="13.0sp" />
+
+</LinearLayout>

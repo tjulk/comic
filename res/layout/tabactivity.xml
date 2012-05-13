@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="57.0dip"
+            android:layout_gravity="bottom"
+            android:background="@drawable/tabbar_bg"
+            android:drawingCacheQuality="high"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@id/tabBtnHome"
+                style="@style/tab_layout" >
+
+                <ImageView
+                    style="@style/tab_img"
+                    android:src="@drawable/tab_icon_favor" />
+
+                <TextView
+                    style="@style/tab_text"
+                    android:text="@string/tabHome" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/tabBtnRecommend"
+                style="@style/tab_layout" >
+
+                <ImageView
+                    style="@style/tab_img"
+                    android:src="@drawable/tab_icon_recommend" />
+
+                <TextView
+                    style="@style/tab_text"
+                    android:text="@string/tabRecommend" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18.0dip"
+                    android:layout_marginTop="-50.0dip"
+                    android:scaleType="center"
+                    android:src="@drawable/tips"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/tabBtnClassify"
+                style="@style/tab_layout" >
+
+                <ImageView
+                    style="@style/tab_img"
+                    android:src="@drawable/tab_icon_classify" />
+
+                <TextView
+                    style="@style/tab_text"
+                    android:text="@string/tabClassify" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/tabBtnSearch"
+                style="@style/tab_layout" >
+
+                <ImageView
+                    style="@style/tab_img"
+                    android:src="@drawable/tab_icon_search" />
+
+                <TextView
+                    style="@style/tab_text"
+                    android:text="@string/tabSearch" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/tabBtnMore"
+                style="@style/tab_layout" >
+
+                <ImageView
+                    style="@style/tab_img"
+                    android:src="@drawable/tab_icon_more" />
+
+                <TextView
+                    style="@style/tab_text"
+                    android:text="@string/tabMore" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</TabHost>

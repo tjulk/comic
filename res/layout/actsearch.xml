@@ -1,111 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical">
 
-    <include layout="@layout/viewdownloadstate" />
+	<RelativeLayout android:id="@id/sTopbar" style="@style/topbar">
 
-    <include layout="@layout/viewsearchresult" />
+		<AutoCompleteTextView android:id="@id/searchText"
+			android:layout_width="fill_parent" android:layout_height="32.0dip"
+			android:layout_gravity="center_vertical" android:layout_marginLeft="10.0dip"
+			android:layout_marginRight="50.0dip" android:background="@drawable/search_text_bg"
+			android:completionThreshold="1" android:dropDownVerticalOffset="-2.0dip"
+			android:hint="@string/searchTips" android:paddingLeft="10.0dip"
+			android:paddingRight="32.0dip" android:selectAllOnFocus="true"
+			android:singleLine="true" android:textColor="#ff000000"
+			android:textColorHint="#ffcccccc" android:textSize="15.0sp" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="46.7dp"
-        android:background="@drawable/search_title_bar_bg2"
-        android:orientation="horizontal"
-        android:padding="5dip" >
+		<ImageButton android:id="@id/searchBtn"
+			android:layout_width="40.0dip" android:layout_height="32.0dip"
+			android:layout_alignTop="@id/searchText" android:layout_marginLeft="-51.0dip"
+			android:layout_toRightOf="@id/searchText" android:background="@drawable/searchbtn"
+			android:src="@drawable/search_icon" />
 
-        <ImageView
-            android:id="@+id/search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/btn_search_bg"
-            android:clickable="true"
-            android:padding="1.0dp" />
+		<ImageButton android:id="@id/searchClearBtn"
+			android:layout_width="32.0dip" android:layout_height="32.0dip"
+			android:layout_alignTop="@id/searchText" android:layout_marginLeft="-83.0dip"
+			android:layout_toRightOf="@id/searchText" android:background="@null"
+			android:src="@drawable/search_clear_btn" android:visibility="gone" />
+	</RelativeLayout>
 
-        <AutoCompleteTextView
-            android:id="@+id/keyword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="5dip"
-            android:layout_toLeftOf="@id/search"
-            android:background="@drawable/bg_edittext"
-            android:singleLine="true" />
-    </RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
 
-    <com.pekall.market.util.KeywordsFlow
-        android:id="@+id/keywordsflow"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+		<RelativeLayout android:id="@id/searchTagBox"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:layout_marginBottom="100.0dip" android:visibility="gone">
 
-    <LinearLayout
-        android:id="@+id/info_bar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center" >
+			<TextView android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:layout_margin="10.0dip"
+				android:text="@string/searchHot" android:textColor="@color/listTitle"
+				android:textSize="13.0sp" />
 
-        <LinearLayout
-            android:id="@+id/loading_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal" >
+			<Button android:id="@id/sKeyWord1" android:layout_width="wrap_content"
+				android:layout_height="40.0dip" android:layout_centerInParent="true"
+				android:background="#00000000" android:gravity="center"
+				android:maxWidth="180.0dip" android:paddingLeft="10.0dip"
+				android:paddingRight="10.0dip" android:singleLine="true"
+				android:textColor="#ffea4816" android:textSize="20.0sp"
+				android:visibility="gone" />
 
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+			<Button android:id="@id/sKeyWord2" android:layout_width="wrap_content"
+				android:layout_height="36.0dip" android:layout_alignLeft="@id/sKeyWord1"
+				android:layout_below="@id/sKeyWord1" android:layout_marginLeft="-30.0dip"
+				android:layout_marginTop="10.0dip" android:background="#00000000"
+				android:gravity="center" android:maxWidth="150.0dip"
+				android:paddingLeft="10.0dip" android:paddingRight="10.0dip"
+				android:singleLine="true" android:textColor="#ffd78e25"
+				android:textSize="16.0sp" android:visibility="gone" />
 
-            <TextView
-                android:id="@+id/search_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+			<Button android:id="@id/sKeyWord3" android:layout_width="wrap_content"
+				android:layout_height="36.0dip" android:layout_above="@id/sKeyWord1"
+				android:layout_alignLeft="@id/sKeyWord1"
+				android:layout_marginBottom="10.0dip" android:layout_marginLeft="-50.0dip"
+				android:background="#00000000" android:gravity="center"
+				android:maxWidth="150.0dip" android:paddingLeft="10.0dip"
+				android:paddingRight="10.0dip" android:singleLine="true"
+				android:textColor="#ff68921f" android:textSize="16.0sp"
+				android:visibility="gone" />
 
-        <LinearLayout
-            android:id="@+id/network_error_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical" >
+			<Button android:id="@id/sKeyWord4" android:layout_width="wrap_content"
+				android:layout_height="30.0dip" android:layout_alignBottom="@id/sKeyWord3"
+				android:layout_marginLeft="20.0dip" android:layout_toRightOf="@id/sKeyWord3"
+				android:background="#00000000" android:gravity="center"
+				android:maxWidth="100.0dip" android:paddingLeft="10.0dip"
+				android:paddingRight="10.0dip" android:singleLine="true"
+				android:textColor="#ff297b9a" android:textSize="13.0sp"
+				android:visibility="gone" />
 
-            <TextView
-                style="@style/software_list_item_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/network_error" />
+			<Button android:id="@id/sKeyWord5" android:layout_width="wrap_content"
+				android:layout_height="30.0dip" android:layout_alignTop="@id/sKeyWord2"
+				android:layout_marginLeft="20.0dip" android:layout_toRightOf="@id/sKeyWord2"
+				android:background="#00000000" android:gravity="center"
+				android:maxWidth="100.0dip" android:paddingLeft="10.0dip"
+				android:paddingRight="10.0dip" android:singleLine="true"
+				android:textColor="#ff2358b0" android:textSize="13.0sp"
+				android:visibility="gone" />
 
-            <Button
-                android:id="@+id/retry"
-                style="@style/button_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dip"
-                android:text="@string/retry" />
-        </LinearLayout>
+			<Button android:id="@id/sKeyWord6" android:layout_width="wrap_content"
+				android:layout_height="30.0dip" android:layout_alignLeft="@id/sKeyWord2"
+				android:layout_below="@id/sKeyWord5" android:layout_marginLeft="20.0dip"
+				android:layout_marginTop="10.0dip" android:background="#00000000"
+				android:gravity="center" android:maxWidth="900.0dip"
+				android:paddingLeft="10.0dip" android:paddingRight="10.0dip"
+				android:singleLine="true" android:textColor="#ff8639cd"
+				android:textSize="12.0sp" android:visibility="gone" />
+		</RelativeLayout>
+ 
 
-        <TextView
-            android:id="@+id/no_matches_found"
-            style="@style/software_list_item_name"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/no_matches_found"
-            android:visibility="gone" />
-    </LinearLayout>
-
-    <ListView
-        android:id="@+id/result"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:cacheColorHint="#00000000"
-        android:divider="@drawable/divider_bg"
-        android:visibility="gone" >
-    </ListView>
+		<com.nodejs.comic.utils.KeywordsFlow
+			android:id="@+id/keywordsflow" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" />
+			<!--
+			<include layout="@layout/viewdownloadstate"
+			android:layout_width="fill_parent" android:layout_height="fill_parent" />
+			<include layout="@layout/viewsearchresult"
+			android:layout_width="fill_parent" android:layout_height="fill_parent" />
+			-->
+	</RelativeLayout>
 
 </LinearLayout>

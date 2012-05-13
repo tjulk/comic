@@ -16,37 +16,28 @@
         <item>男</item>
         <item>女</item>
     </string-array>
-    
-    <string-array name="download_entries_list_preference">
-        <item>@string/download_entry_one</item>
-        <item>@string/download_entry_two</item>
-    </string-array>
-    <string-array name="download_entryValues_list_preference">
-        <item>1</item>
-        <item>2</item>
-    </string-array>
     <string-array name="key_words">
-        <item>B-Angry Birds</item>
-        <item>Tom Cat</item>
-        <item>Fruit</item>
-        <item>B-Google+</item>
-        <item>B-PPTV</item>
-        <item>File explorer</item>
-        <item>Gmail</item>
-        <item>Ever note</item>
-        <item>QQ</item>
-        <item>flash</item>
-        <item>Book</item>
-        <item>browser</item>
-        <item>Fishing</item>
-        <item>B-Subway</item>
-        <item>music</item>
-        <item>weather</item>
-        <item>Tool</item>
-        <item>Office</item>
-        <item>B-FaceBook</item>
-        <item>Twitter</item>
-        <item>Reader</item>
-        <item>360</item>
+        <item>火影忍者</item>
+        <item>妖精的尾巴</item>
+        <item>海贼王</item>
+        <item>七龙珠</item>
+        <item>死神</item>
+        <item>机器猫</item>
+        <item>灌篮高手</item>
+        <item>棋魂</item>
+        <item>游戏王</item>
+        <item>圣斗士</item>
+        <item>蜡笔小心</item>
+        <item>浪客剑心</item>
+        <item>寄生兽</item>
+        <item>行尸走肉</item>
+        <item>天子传奇</item>
+        <item>杀戮都市</item>
+        <item>冥王神话</item>
+        <item>格雷少年</item>
+        <item>大汉天子</item>
+        <item>屠龙记</item>
+        <item>只有神知道的世界</item>
+        <item>吸血鬼日记</item>
     </string-array>
 </resources>

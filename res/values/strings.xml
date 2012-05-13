@@ -294,32 +294,4 @@
     <string name="UMNotNow">以后再说</string>
     <string name="UMToast_IsUpdating">正在更新中....</string>
     <string name="UMDialog_InstallAPK">最新版本已下载，是否安装？</string>
-    
-	<!-- download operate -->
-	<string name="operate_title">下载操作</string>
-	<string name="operate_download_all_software">全部下载</string>
-	<string name="operate_pause_all_software">全部暂停</string>
-	<string name="operate_clear_all_software">清除列表</string>
-	<string name="operate_delete_completed_software">删除完成</string>
-	<string name="operate_one_key_update">一键更新</string>
-	<string name="operate_wait">请等待</string>
-	<!-- button -->
-	<string name="button_ok">确定</string>
-	<string name="button_cancel">取消</string>
-	
-	<string name="toast_carsh_msg">Dear,I broke down!</string>
-    <string name="toast_carsh_title">Program Error:</string>
-    
-    <string name="only_use_wifi_to_download_key">OnlyUsehWifiToDownload</string>
-    
-    <string name="notify_no_wifi_download_error">You set only use wifi to download.</string>
-    
-    <string name="network_error">网络异常，点击重试</string>
-    <string name="retry">重试</string>
-    <!-- search -->
-    <string name="no_matches_found">没有找到匹配记录</string>
-    <string name="searching">查询中...</string>
-    
-    <string name="download_entry_one">24Hours Update</string>
-    <string name="download_entry_two">EveryTime Update</string>
 </resources>
